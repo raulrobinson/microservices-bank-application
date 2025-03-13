@@ -1,0 +1,183 @@
+2025-03-13 17:04:22.228 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 1 saved
+2025-03-13 17:04:22.236 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 17:04:22.238 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 2 saved
+2025-03-13 17:04:22.239 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 17:04:22.239 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 3 saved
+2025-03-13 17:04:22.240 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 3 saved for client ID 3
+2025-03-13 17:04:53.947 [http-nio-0.0.0.0-8000-exec-1] INFO  TRANSACTION_AUDIT - Found 3 accounts
+2025-03-13 17:05:06.017 [http-nio-0.0.0.0-8000-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:26:36.859 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 1 saved
+2025-03-13 18:26:36.867 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:26:36.869 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 2 saved
+2025-03-13 18:26:36.869 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:26:36.882 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 3 saved
+2025-03-13 18:26:36.883 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 3 saved for client ID 3
+2025-03-13 18:30:13.876 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:30:13.878 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:30:13.887 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:30:13.893 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:30:13.893 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:30:13.894 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:32:30.423 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:32:30.425 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:32:30.439 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:32:30.451 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:32:30.452 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:32:30.453 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:32:35.674 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:32:35.677 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:32:35.686 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:32:35.692 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:32:35.692 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:32:35.693 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:32:37.729 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:32:37.731 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:32:37.741 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:32:37.746 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:32:37.747 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:32:37.748 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:32:39.772 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:32:39.774 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:32:39.784 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:32:39.788 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:32:39.789 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:32:39.789 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:32:44.861 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:32:44.863 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:32:44.871 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:32:44.875 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:32:44.875 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:32:44.876 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:32:56.890 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:32:56.892 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:32:56.901 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:32:56.906 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:32:56.907 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:32:56.908 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:33:38.967 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:33:38.969 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:33:38.978 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:33:38.983 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:33:38.983 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:33:38.984 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:33:48.070 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:33:48.071 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:33:48.080 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:33:48.083 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:33:48.084 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:33:48.084 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:33:51.059 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:33:51.062 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:33:51.076 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:33:51.082 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:33:51.082 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:33:51.083 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:33:55.151 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:33:55.153 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:33:55.161 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:33:55.165 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:33:55.165 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:33:55.166 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:34:32.505 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:34:32.509 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:34:32.523 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:34:32.528 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:34:32.528 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:34:32.528 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:34:38.523 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:34:38.525 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:34:38.535 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:34:38.540 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:34:38.540 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:34:38.541 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:39:58.133 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:39:58.136 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:39:58.146 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:39:58.150 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:39:58.150 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:39:58.151 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:40:15.191 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:40:15.194 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:40:15.206 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:40:15.212 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:40:15.213 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:40:15.214 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:40:17.259 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:40:17.261 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:40:17.270 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:40:17.275 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:40:17.276 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:40:17.277 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:41:53.455 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:41:53.457 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:41:53.465 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:41:53.469 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:41:53.469 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:41:53.470 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:42:06.830 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:42:06.833 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:42:06.842 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:42:06.847 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:42:06.849 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:42:06.850 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:42:33.942 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:42:33.946 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:42:33.961 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:42:33.966 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:42:33.966 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:42:33.967 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:43:37.231 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:43:37.236 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:43:37.253 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:43:37.261 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:43:37.262 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:43:37.263 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:44:23.309 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:44:23.310 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:44:23.321 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:44:23.327 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:44:23.327 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:44:23.328 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:44:25.328 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:44:25.330 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:44:25.340 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:44:25.344 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:44:25.345 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:44:25.345 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:44:34.366 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:44:34.368 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:44:34.377 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:44:34.381 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:44:34.382 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:44:34.382 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:47:14.963 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:47:14.966 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:47:14.978 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:47:14.991 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:47:14.991 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:47:14.992 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:59:27.035 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:59:27.038 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:59:27.050 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:59:27.056 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:59:27.057 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:59:27.058 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 18:59:34.734 [main] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 18:59:34.772 [main] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:59:34.811 [main] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 18:59:34.826 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 18:59:34.828 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:59:34.834 [main] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 19:16:58.627 [main] INFO  TRANSACTION_AUDIT - Client with ID 1 found
+2025-03-13 19:16:58.685 [main] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 19:16:58.714 [main] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
+2025-03-13 19:16:58.722 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 found
+2025-03-13 19:16:58.725 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 19:16:58.730 [main] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
+2025-03-13 17:00:49.858 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:03:01.022 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:03:34.431 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:03:51.629 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:04:54.559 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:05:20.622 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:41:51.996 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts

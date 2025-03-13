@@ -1,0 +1,63 @@
+2025-03-13 16:58:29.396 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 16:58:29.400 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 16:59:49.186 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Found 2 clients
+2025-03-13 17:00:52.692 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 17:00:52.694 [restartedMain] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 18:30:13.872 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:30:13.891 [http-nio-0.0.0.0-8001-exec-2] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:32:30.421 [http-nio-0.0.0.0-8001-exec-4] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:32:30.449 [http-nio-0.0.0.0-8001-exec-5] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:32:35.672 [http-nio-0.0.0.0-8001-exec-7] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:32:35.689 [http-nio-0.0.0.0-8001-exec-8] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:32:37.727 [http-nio-0.0.0.0-8001-exec-10] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:32:37.745 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:32:39.770 [http-nio-0.0.0.0-8001-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:32:39.787 [http-nio-0.0.0.0-8001-exec-4] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:32:44.858 [http-nio-0.0.0.0-8001-exec-6] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:32:44.873 [http-nio-0.0.0.0-8001-exec-7] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:32:56.887 [http-nio-0.0.0.0-8001-exec-9] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:32:56.904 [http-nio-0.0.0.0-8001-exec-10] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:33:38.965 [http-nio-0.0.0.0-8001-exec-2] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:33:38.981 [http-nio-0.0.0.0-8001-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:33:48.068 [http-nio-0.0.0.0-8001-exec-5] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:33:48.082 [http-nio-0.0.0.0-8001-exec-6] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:33:51.058 [http-nio-0.0.0.0-8001-exec-8] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:33:51.079 [http-nio-0.0.0.0-8001-exec-9] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:33:55.150 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:33:55.164 [http-nio-0.0.0.0-8001-exec-2] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:34:32.500 [http-nio-0.0.0.0-8001-exec-4] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:34:32.527 [http-nio-0.0.0.0-8001-exec-5] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:34:38.521 [http-nio-0.0.0.0-8001-exec-7] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:34:38.539 [http-nio-0.0.0.0-8001-exec-8] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:39:58.130 [http-nio-0.0.0.0-8001-exec-10] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:39:58.149 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:40:15.189 [http-nio-0.0.0.0-8001-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:40:15.210 [http-nio-0.0.0.0-8001-exec-4] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:40:17.258 [http-nio-0.0.0.0-8001-exec-6] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:40:17.274 [http-nio-0.0.0.0-8001-exec-7] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:41:53.454 [http-nio-0.0.0.0-8001-exec-9] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:41:53.468 [http-nio-0.0.0.0-8001-exec-10] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:42:06.828 [http-nio-0.0.0.0-8001-exec-2] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:42:06.846 [http-nio-0.0.0.0-8001-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:42:33.940 [http-nio-0.0.0.0-8001-exec-5] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:42:33.964 [http-nio-0.0.0.0-8001-exec-6] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:43:37.228 [http-nio-0.0.0.0-8001-exec-8] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:43:37.259 [http-nio-0.0.0.0-8001-exec-9] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:44:23.307 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:44:23.326 [http-nio-0.0.0.0-8001-exec-2] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:44:25.327 [http-nio-0.0.0.0-8001-exec-4] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:44:25.344 [http-nio-0.0.0.0-8001-exec-5] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:44:34.364 [http-nio-0.0.0.0-8001-exec-7] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:44:34.380 [http-nio-0.0.0.0-8001-exec-8] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:47:14.960 [http-nio-0.0.0.0-8001-exec-10] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:47:14.982 [http-nio-0.0.0.0-8001-exec-1] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:59:27.033 [http-nio-0.0.0.0-8001-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:59:27.055 [http-nio-0.0.0.0-8001-exec-4] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:59:34.721 [http-nio-0.0.0.0-8001-exec-6] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 18:59:34.825 [http-nio-0.0.0.0-8001-exec-7] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 18:59:48.362 [main] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 18:59:48.391 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
+2025-03-13 19:16:58.606 [http-nio-0.0.0.0-8001-exec-9] INFO  TRANSACTION_AUDIT - Account with ID 1
+2025-03-13 19:16:58.720 [http-nio-0.0.0.0-8001-exec-10] INFO  TRANSACTION_AUDIT - Account with ID 2
+2025-03-13 19:17:11.828 [main] INFO  TRANSACTION_AUDIT - Client with ID 1 saved
+2025-03-13 19:17:11.850 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
