@@ -1,0 +1,437 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "client",
+    "description": "Client Backend project for Bank Application",
+    "termsOfService": "https://opensource.org/licenses/MIT",
+    "contact": {
+      "name": "Raul Bolivar Navas",
+      "email": "rasysbox@hotmail.com"
+    },
+    "license": {
+      "name": "MIT License",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8001",
+      "description": "Client Backend project for Bank Application"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Client",
+      "description": "Client operations"
+    }
+  ],
+  "paths": {
+    "/api/v1/clients/{id}": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "summary": "Get client by id",
+        "description": "Get client by id",
+        "operationId": "get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Client ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Client",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Client not found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Client"
+        ],
+        "summary": "Update client",
+        "description": "Update client",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Client updated",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Client"
+        ],
+        "summary": "Delete client",
+        "description": "Delete client",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Client ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Client deleted"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/clients": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "summary": "Get all clients",
+        "description": "Get all clients",
+        "operationId": "getAll",
+        "responses": {
+          "200": {
+            "description": "List of clients",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClientDto"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No content",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClientDto"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClientDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "summary": "Create client",
+        "description": "Create client",
+        "operationId": "create",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Client created",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/clients/status/{id}": {
+      "patch": {
+        "tags": [
+          "Client"
+        ],
+        "summary": "Partial update client",
+        "description": "Partial update client",
+        "operationId": "partialUpdate",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Client ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialClientDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Client updated",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClientDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ClientRequestDto": {
+        "type": "object",
+        "properties": {
+          "dni": {
+            "type": "string",
+            "description": "Client DNI",
+            "example": "12345678"
+          },
+          "name": {
+            "type": "string",
+            "description": "Client name",
+            "example": "John Doe"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password",
+            "example": "123456"
+          },
+          "gender": {
+            "type": "string",
+            "description": "Client Gender",
+            "example": "M"
+          },
+          "age": {
+            "type": "integer",
+            "description": "Client age",
+            "format": "int32",
+            "example": 25
+          },
+          "address": {
+            "type": "string",
+            "description": "Client address",
+            "example": "Av. Los Pinos 123"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Client phone",
+            "example": "987654321"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "description": "Client request data transfer object"
+      },
+      "ClientDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "dni": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PartialClientDto": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "description": "Partial Client DTO"
+      }
+    }
+  }
+}

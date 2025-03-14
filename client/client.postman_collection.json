@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "99734654-06cc-41d3-96fe-be81b77de059",
+		"name": "client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12090918"
+	},
+	"item": [
+		{
+			"name": "All",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dni\": \"12345678\",\n  \"name\": \"John Doe\",\n  \"password\": \"123456\",\n  \"gender\": \"M\",\n  \"age\": 25,\n  \"address\": \"Av. Los Pinos 123\",\n  \"phone\": \"987654321\",\n  \"active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dni\": \"111\",\n  \"name\": \"John Doe\",\n  \"password\": \"123456\",\n  \"gender\": \"M\",\n  \"age\": 25,\n  \"address\": \"Av. Los Pinos 123\",\n  \"phone\": \"987654321\",\n  \"active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"active\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/clients/status/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"status",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
