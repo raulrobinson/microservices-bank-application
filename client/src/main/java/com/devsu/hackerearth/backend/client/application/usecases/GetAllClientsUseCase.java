@@ -2,7 +2,7 @@ package com.devsu.hackerearth.backend.client.application.usecases;
 
 import com.devsu.hackerearth.backend.client.domain.model.ClientDomain;
 import com.devsu.hackerearth.backend.client.domain.repository.ClientRepository;
-import com.devsu.hackerearth.backend.client.infrastructure.shared.exception.GlobalException;
+import com.devsu.hackerearth.backend.client.infrastructure.shared.exception.NoContentException;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ public class GetAllClientsUseCase {
 
     public List<ClientDomain> handle() {
         List<ClientDomain> clients = clientRepository.getAll();
-        if (clients.isEmpty()) throw new GlobalException("No clients found");
+        if (clients.isEmpty()) throw new NoContentException("No clients found");
         log.info("Found {} clients", clients.size());
         return clients;
     }

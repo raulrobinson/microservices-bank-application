@@ -5,6 +5,11 @@ springdoc:
   swagger-ui:
     use-root-path: true
 
+# Context Path Configuration
+controller:
+  properties:
+    base-path: /api/v1
+
 # OpenAPI Definition
 openapi:
   service:
