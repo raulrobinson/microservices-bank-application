@@ -1,6 +1,7 @@
 package com.devsu.hackerearth.backend.client.infrastructure.persistence;
 
 import java.util.List;
+import java.util.UUID;
 
 import com.devsu.hackerearth.backend.client.application.dto.ClientRequestDto;
 import com.devsu.hackerearth.backend.client.application.dto.PartialClientDto;
@@ -35,12 +36,12 @@ public class JpaClientRepository implements ClientRepository {
 			.toList();
 	}
 
-	// Get clients by id
+	// Get clients by Client Code
 	@Override
-	public ClientDomain getById(Long id) {
-		return clientMapper.toClientDomain(springDataClientRepository
-				.findById(id)
-				.orElse(null));
+	public ClientDomain getByClientCode(String ClientCode) {
+		ClientEntity clientEntity = springDataClientRepository.findClientEntityByClientCode(ClientCode);
+		if (clientEntity == null) throw new GlobalException("Client with CLIENT CODE: " + ClientCode + " not found");
+		return clientMapper.toClientDomain(clientEntity);
 	}
 
 	// Create client
@@ -49,7 +50,7 @@ public class JpaClientRepository implements ClientRepository {
         ClientEntity findClientEntityByDni = springDataClientRepository.findClientByDni(client.getDni());
         if (findClientEntityByDni != null) throw new GlobalException("Client already exists with ID " + client.getDni());
 		ClientEntity savedClientEntity = springDataClientRepository.save(clientMapper.toClientEntity(client));
-		if (savedClientEntity.getId() != 0) {
+		if (savedClientEntity.getId() != null) {
 			transactionLogger.info("Client with ID {} and DNI {} saved", savedClientEntity.getId(), savedClientEntity.getDni());
 			return clientMapper.toClientDomain(savedClientEntity);
 		}
@@ -58,11 +59,12 @@ public class JpaClientRepository implements ClientRepository {
 
 	// Update client
 	@Override
-	public ClientDomain update(Long id, ClientRequestDto clientDto) {
+	public ClientDomain update(String clientCode,
+							   ClientRequestDto clientDto) {
 		// Check if client Exists by ID and DNI match
-		ClientEntity clientByDniAndId = springDataClientRepository.findClientByDniAndId(clientDto.getDni(), id);
+		ClientEntity clientByDniAndId = springDataClientRepository.findClientEntityByDniAndClientCode(clientDto.getDni(), clientCode);
 		if (clientByDniAndId == null) {
-			throw new GlobalException("Client with DNI: " + clientDto.getDni() + " and ID: " + id + " not match or not found");
+			throw new GlobalException("Client with DNI: " + clientDto.getDni() + " and CLIENT CODE: " + clientCode + " not match or not found");
 		} else {
 
 			// Update Client
@@ -74,11 +76,13 @@ public class JpaClientRepository implements ClientRepository {
 			clientByDniAndId.setAddress(clientDto.getAddress());
 			clientByDniAndId.setPassword(clientDto.getPassword());
 			clientByDniAndId.setActive(clientDto.isActive());
+			clientByDniAndId.setClientType(clientDto.getClientType());
+			clientByDniAndId.setClientCode(clientCode);
 
 			// Save updated Client
 			ClientEntity updatedClient = springDataClientRepository.save(clientByDniAndId);
-			if (updatedClient.getId() != 0) {
-				transactionLogger.info("Client with ID {} updated", updatedClient.getId());
+			if (updatedClient.getId() != null) {
+				transactionLogger.info("Client with CLIENT CODE: {} updated", updatedClient.getClientCode());
 				return clientMapper.toClientDomain(updatedClient);
 			}
 
@@ -88,19 +92,20 @@ public class JpaClientRepository implements ClientRepository {
 
     // Partial update account
 	@Override
-    public ClientDomain partialUpdate(Long id, PartialClientDto partialClientDto) {
+    public ClientDomain partialUpdate(String clientCode,
+									  PartialClientDto partialClientDto) {
 		// Check if exists client by ID
-		ClientEntity clientById = springDataClientRepository.findById(id).orElse(null);
+		ClientEntity clientById = springDataClientRepository.findClientEntityByClientCode(clientCode);
         if (clientById == null)
-            throw new GlobalException("Client with ID " + id + " not found");
+            throw new GlobalException("Client with CLIENT CODE: " + clientCode + " not found");
 
 		// Update Client
 		clientById.setActive(partialClientDto.isActive());
 
 		// Save updated Client
 		ClientEntity updatedClient = springDataClientRepository.save(clientById);
-		if (updatedClient.getId() != 0) {
-			transactionLogger.info("Client with ID {} status updated", updatedClient.getId());
+		if (updatedClient.getId() != null) {
+			transactionLogger.info("Client with CLIENT CODE: {} status updated", updatedClient.getClientCode());
 			return clientMapper.toClientDomain(updatedClient);
 		}
 
@@ -109,13 +114,12 @@ public class JpaClientRepository implements ClientRepository {
 
 	// Delete client
 	@Override
-	public void deleteById(Long id) {
-		if (springDataClientRepository.existsById(id)) {
-            springDataClientRepository.deleteById(id);
-            transactionLogger.info("Client with ID {} deleted", id);
-        } else {
-            throw new GlobalException("Client with ID " + id + " not found");
-        }
+	public void deleteByClientCode(String clientCode) {
+		if (clientCode == null) throw new GlobalException("Client code is null");
+		ClientEntity clientByClientCode = springDataClientRepository.findClientEntityByClientCode(clientCode);
+		if (clientByClientCode == null) throw new GlobalException("Client with CLIENT CODE: " + clientCode + " not found");
+		transactionLogger.info("Client with CLIENT CODE: {} deleted", clientByClientCode.getClientCode());
+		springDataClientRepository.delete(clientByClientCode);
 	}
 
 }

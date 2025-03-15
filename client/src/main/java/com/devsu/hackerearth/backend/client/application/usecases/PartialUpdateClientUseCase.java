@@ -14,7 +14,7 @@ public class PartialUpdateClientUseCase {
         this.clientRepository = clientRepository;
     }
 
-    public ClientDomain execute(Long id, PartialClientDto client) {
-        return clientRepository.partialUpdate(id, client);
+    public ClientDomain execute(String clientCode, PartialClientDto client) {
+        return clientRepository.partialUpdate(clientCode, client);
     }
 }

@@ -17,57 +17,57 @@ import com.devsu.hackerearth.backend.client.infrastructure.persistence.SpringDat
 @ExtendWith(MockitoExtension.class)
 public class sampleTest {
 
-    @Mock
-    private ClientMapper clientMapper;
-
-    @InjectMocks
-    private JpaClientRepository clientService;
-
-    @Mock
-    private SpringDataClientRepository springDataClientRepository;
-
-    private ClientEntity clientEntity;
-    private ClientDto clientDto;
-    private ClientRequestDto clientRequestDto;
-    private PartialClientDto partialClientDto;
-
-    @BeforeEach
-    void setUp() {
-        clientEntity = new ClientEntity();
-        clientDto = new ClientDto();
-        clientRequestDto = new ClientRequestDto();
-
-        clientEntity.setId(1L);
-        clientEntity.setName("Raul Bolivar");
-        clientEntity.setDni("72111");
-        clientEntity.setGender("Male");
-        clientEntity.setAge(51);
-        clientEntity.setAddress("CL 3 51B-188");
-        clientEntity.setPhone("3508619025");
-        clientEntity.setPassword("password");
-        clientEntity.setActive(true);
-
-        clientDto.setName("Raul Bolivar");
-        clientDto.setDni("72111");
-        clientDto.setGender("Male");
-        clientDto.setAge(51);
-        clientDto.setAddress("CL 3 51B-188");
-        clientDto.setPhone("3508619025");
-        clientDto.setPassword("password");
-        clientDto.setActive(true);
-
-        clientRequestDto.setName("Raul Bolivar");
-        clientRequestDto.setDni("72111");
-        clientRequestDto.setGender("Male");
-        clientRequestDto.setAge(51);
-        clientRequestDto.setAddress("CL 3 51B-188");
-        clientRequestDto.setPhone("3508619025");
-        clientRequestDto.setPassword("password");
-        clientRequestDto.setActive(true);
-
-        partialClientDto = new PartialClientDto();
-        partialClientDto.setActive(true);
-    }
+//    @Mock
+//    private ClientMapper clientMapper;
+//
+//    @InjectMocks
+//    private JpaClientRepository clientService;
+//
+//    @Mock
+//    private SpringDataClientRepository springDataClientRepository;
+//
+//    private ClientEntity clientEntity;
+//    private ClientDto clientDto;
+//    private ClientRequestDto clientRequestDto;
+//    private PartialClientDto partialClientDto;
+//
+//    @BeforeEach
+//    void setUp() {
+//        clientEntity = new ClientEntity();
+//        clientDto = new ClientDto();
+//        clientRequestDto = new ClientRequestDto();
+//
+//        //clientEntity.setId("550e8400-e29b-41d4-a716-446655440000");
+//        clientEntity.setName("Raul Bolivar");
+//        clientEntity.setDni("72111");
+//        clientEntity.setGender("Male");
+//        clientEntity.setAge(51);
+//        clientEntity.setAddress("CL 3 51B-188");
+//        clientEntity.setPhone("3508619025");
+//        clientEntity.setPassword("password");
+//        clientEntity.setActive(true);
+//
+//        clientDto.setName("Raul Bolivar");
+//        clientDto.setDni("72111");
+//        clientDto.setGender("Male");
+//        clientDto.setAge(51);
+//        clientDto.setAddress("CL 3 51B-188");
+//        clientDto.setPhone("3508619025");
+//        clientDto.setPassword("password");
+//        clientDto.setActive(true);
+//
+//        clientRequestDto.setName("Raul Bolivar");
+//        clientRequestDto.setDni("72111");
+//        clientRequestDto.setGender("Male");
+//        clientRequestDto.setAge(51);
+//        clientRequestDto.setAddress("CL 3 51B-188");
+//        clientRequestDto.setPhone("3508619025");
+//        clientRequestDto.setPassword("password");
+//        clientRequestDto.setActive(true);
+//
+//        partialClientDto = new PartialClientDto();
+//        partialClientDto.setActive(true);
+//    }
 
 //    @Test
 //    void testGetAllClients_Success() {

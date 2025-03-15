@@ -9,9 +9,9 @@ import java.util.List;
 public interface ClientRepository {
 
     List<ClientDomain> getAll();
-    ClientDomain getById(Long id);
+    ClientDomain getByClientCode(String clientCode);
     ClientDomain create(ClientRequestDto client);
-    ClientDomain update(Long id, ClientRequestDto client);
-    ClientDomain partialUpdate(Long id, PartialClientDto client);
-    void deleteById(Long id);
+    ClientDomain update(String clientCode, ClientRequestDto clientDto);
+    ClientDomain partialUpdate(String clientCode, PartialClientDto client);
+    void deleteByClientCode(String clientCode);
 }

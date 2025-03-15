@@ -18,6 +18,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("${controller.properties.base-path}/clients")
 @Tag(name = "Client", description = "Client operations")
@@ -53,53 +55,53 @@ public class ClientCommandController {
 
     /**
      * Update client
-     * @param id Client ID (required)
+     * @param clientCode Client code (required)
      * @param clientDto Client data (required)
      * @return ClientDto (updated)
      */
-    @PutMapping("/{id}")
+    @PutMapping("/{clientCode}")
     @Operation(summary = "Update client", description = "Update client")
     @ApiResponse(responseCode = "200", description = "Client updated")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public ResponseEntity<ClientDto> update(@PathVariable Long id,
+    public ResponseEntity<ClientDto> update(@PathVariable String clientCode,
                                             @RequestBody ClientRequestDto clientDto) {
-        ClientDto client = ClientMapper.INSTANCE.toClientDto(updateClient.execute(id, clientDto));
+        ClientDto client = ClientMapper.INSTANCE.toClientDto(updateClient.execute(clientCode, clientDto));
         if (client == null) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(client, HttpStatus.OK);
     }
 
     /**
      * Partial update client
-     * @param id Client ID (required)
+     * @param clientCode Client code (required)
      * @param partialClientDto Partial client data (required)
      * @return ClientDto (updated)
      */
-    @PatchMapping("/status/{id}")
+    @PatchMapping("/status/{clientCode}")
     @Operation(summary = "Partial update client", description = "Partial update client")
-    @Parameter(name = "id", description = "Client ID", required = true, example = "1")
+    @Parameter(name = "clientCode", description = "Client ID", required = true, example = "1")
     @ApiResponse(responseCode = "200", description = "Client updated")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public ResponseEntity<ClientDto> partialUpdate(@PathVariable Long id,
+    public ResponseEntity<ClientDto> partialUpdate(@PathVariable String clientCode,
                                                    @RequestBody PartialClientDto partialClientDto) {
-        ClientDto client = ClientMapper.INSTANCE.toClientDto(partialUpdateClient.execute(id, partialClientDto));
+        ClientDto client = ClientMapper.INSTANCE.toClientDto(partialUpdateClient.execute(clientCode, partialClientDto));
         if (client == null) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(client, HttpStatus.OK);
     }
 
     /**
      * Delete client
-     * @param id Client ID (required)
+     * @param clientCode Client code (required)
      */
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{clientCode}")
     @Operation(summary = "Delete client", description = "Delete client")
-    @Parameter(name = "id", description = "Client ID", required = true, example = "1")
+    @Parameter(name = "clientCode", description = "Client client Code", required = true, example = "CLI-1712345678903")
     @ApiResponse(responseCode = "204", description = "Client deleted")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public void delete(@PathVariable Long id) {
-        deleteClient.execute(id);
+    public void delete(@PathVariable String clientCode) {
+        deleteClient.execute(clientCode);
     }
 
 }

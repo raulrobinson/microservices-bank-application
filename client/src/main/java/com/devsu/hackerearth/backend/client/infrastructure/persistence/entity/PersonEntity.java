@@ -1,6 +1,9 @@
 package com.devsu.hackerearth.backend.client.infrastructure.persistence.entity;
 
+import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.DniType;
 import jakarta.persistence.Column;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.MappedSuperclass;
 
 import lombok.Getter;
@@ -20,4 +23,8 @@ public class PersonEntity extends Base {
 	private int age;
 	private String address;
 	private String phone;
+
+	//@Enumerated(EnumType.STRING)
+	@Column(name = "dni_type", nullable = false, length = 20)
+	private String dniType;
 }

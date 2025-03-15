@@ -12,7 +12,7 @@ public class DeleteClientUseCase {
         this.clientRepository = clientRepository;
     }
 
-    public void execute(Long id) {
-        clientRepository.deleteById(id);
+    public void execute(String clientCode) {
+        clientRepository.deleteByClientCode(clientCode);
     }
 }

@@ -4,7 +4,7 @@
 2025-03-13 17:04:22.239 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
 2025-03-13 17:04:22.239 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 3 saved
 2025-03-13 17:04:22.240 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 3 saved for client ID 3
-2025-03-13 17:04:53.947 [http-nio-0.0.0.0-8000-exec-1] INFO  TRANSACTION_AUDIT - Found 3 accounts
+2025-03-13 17:04:53.947 [http-nio-0.0.0.0-8000-exec-1] INFO  TRANSACTION_AUDIT - Found 3 accountEntities
 2025-03-13 17:05:06.017 [http-nio-0.0.0.0-8000-exec-3] INFO  TRANSACTION_AUDIT - Account with ID 1
 2025-03-13 18:26:36.859 [restartedMain] INFO  TRANSACTION_AUDIT - Account with Client ID: 1 saved
 2025-03-13 18:26:36.867 [restartedMain] INFO  TRANSACTION_AUDIT - Transaction with ID 1 saved for client ID 1
@@ -174,10 +174,10 @@
 2025-03-13 19:16:58.722 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 found
 2025-03-13 19:16:58.725 [main] INFO  TRANSACTION_AUDIT - Client with ID 2 saved
 2025-03-13 19:16:58.730 [main] INFO  TRANSACTION_AUDIT - Transaction with ID 2 saved for client ID 2
-2025-03-13 17:00:49.858 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
-2025-03-13 17:03:01.022 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
-2025-03-13 17:03:34.431 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
-2025-03-13 17:03:51.629 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
-2025-03-13 17:04:54.559 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
-2025-03-13 17:05:20.622 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
-2025-03-13 17:41:51.996 [main] INFO  TRANSACTION_AUDIT - Found 1 accounts
+2025-03-13 17:00:49.858 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities
+2025-03-13 17:03:01.022 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities
+2025-03-13 17:03:34.431 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities
+2025-03-13 17:03:51.629 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities
+2025-03-13 17:04:54.559 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities
+2025-03-13 17:05:20.622 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities
+2025-03-13 17:41:51.996 [main] INFO  TRANSACTION_AUDIT - Found 1 accountEntities

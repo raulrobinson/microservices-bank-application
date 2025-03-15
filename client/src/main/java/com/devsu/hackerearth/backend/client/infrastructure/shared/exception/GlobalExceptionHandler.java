@@ -28,7 +28,7 @@ public class GlobalExceptionHandler {
         response.put("path", request.getRequestURI());
         response.put("message", ex.getMessage());
 
-        log.warn("Bad request {}", ex.getMessage());
+        //log.warn("Bad request {}", ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 

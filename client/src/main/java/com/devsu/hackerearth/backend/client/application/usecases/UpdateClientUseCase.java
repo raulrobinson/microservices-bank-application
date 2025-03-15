@@ -5,6 +5,8 @@ import com.devsu.hackerearth.backend.client.domain.model.ClientDomain;
 import com.devsu.hackerearth.backend.client.domain.repository.ClientRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class UpdateClientUseCase {
 
@@ -14,7 +16,7 @@ public class UpdateClientUseCase {
         this.clientRepository = clientRepository;
     }
 
-    public ClientDomain execute(Long id, ClientRequestDto client) {
-        return clientRepository.update(id, client);
+    public ClientDomain execute(String clientCode, ClientRequestDto client) {
+        return clientRepository.update(clientCode, client);
     }
 }

@@ -4,6 +4,7 @@ import com.devsu.hackerearth.backend.client.application.dto.ClientDto;
 import com.devsu.hackerearth.backend.client.application.dto.ClientRequestDto;
 import com.devsu.hackerearth.backend.client.domain.model.ClientDomain;
 import com.devsu.hackerearth.backend.client.infrastructure.persistence.entity.ClientEntity;
+import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.DniType;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class ClientMapperImpl implements ClientMapper {
         } else {
             ClientDomain clientDomain = new ClientDomain();
             clientDomain.setId(clientEntity.getId());
-            clientDomain.setDni(clientEntity.getDni());
+            clientDomain.setDni(String.valueOf(clientEntity.getDni()));
             clientDomain.setName(clientEntity.getName());
             clientDomain.setPassword(clientEntity.getPassword());
             clientDomain.setGender(clientEntity.getGender());
@@ -26,6 +27,9 @@ public class ClientMapperImpl implements ClientMapper {
             clientDomain.setAddress(clientEntity.getAddress());
             clientDomain.setPhone(clientEntity.getPhone());
             clientDomain.setActive(clientEntity.isActive());
+            clientDomain.setClientCode(clientEntity.getClientCode());
+            clientDomain.setClientType(clientEntity.getClientType());
+            clientDomain.setDniType(clientEntity.getDniType());
             return clientDomain;
         }
     }
@@ -43,6 +47,8 @@ public class ClientMapperImpl implements ClientMapper {
             clientEntity.setPhone(clientRequestDto.getPhone());
             clientEntity.setPassword(clientRequestDto.getPassword());
             clientEntity.setActive(clientRequestDto.isActive());
+            clientEntity.setClientType(clientRequestDto.getClientType());
+            clientEntity.setDniType(clientRequestDto.getDniType());
             return clientEntity;
         }
     }
@@ -61,6 +67,9 @@ public class ClientMapperImpl implements ClientMapper {
             clientDto.setAddress(clientDomain.getAddress());
             clientDto.setPhone(clientDomain.getPhone());
             clientDto.setActive(clientDomain.isActive());
+            clientDto.setClientCode(clientDomain.getClientCode());
+            clientDto.setClientType(clientDomain.getClientType());
+            clientDto.setDniType(clientDomain.getDniType());
             return clientDto;
         }
     }

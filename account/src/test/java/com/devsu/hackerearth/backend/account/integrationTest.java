@@ -1,8 +1,8 @@
 package com.devsu.hackerearth.backend.account;
 
-import com.devsu.hackerearth.backend.account.model.Account;
-import com.devsu.hackerearth.backend.account.model.enumeration.AccountType;
-import com.devsu.hackerearth.backend.account.repository.AccountRepository;
+import com.devsu.hackerearth.backend.account.infrastructure.persistence.entity.AccountEntity;
+import com.devsu.hackerearth.backend.account.infrastructure.persistence.enumeration.AccountType;
+import com.devsu.hackerearth.backend.account.infrastructure.persistence.SpringDataAccountRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,6 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -29,23 +30,23 @@ public class integrationTest {
 	private MockMvc mockMvc;
 
 	@Autowired
-	private AccountRepository accountRepository;
+	private SpringDataAccountRepository springDataAccountRepository;
 
 	@Autowired
 	private ObjectMapper objectMapper;
 
 	@BeforeEach
 	void setUp() {
-		accountRepository.deleteAll();
+		springDataAccountRepository.deleteAll();
 
-		Account account = new Account();
-		account.setId(1L);
-		account.setInitialAmount(1000.0);
-		account.setNumber("1234567890");
-		account.setType(AccountType.CREDIT);
-		account.setClientId(1L);
-		account.setActive(true);
-		accountRepository.save(account);
+		AccountEntity accountEntity = new AccountEntity();
+		accountEntity.setId(1L);
+		accountEntity.setInitialAmount(BigDecimal.valueOf(1000.0));
+		accountEntity.setNumber("1234567890");
+		accountEntity.setType(AccountType.CREDIT);
+		accountEntity.setClientCode("CLI-1712345678901");
+		accountEntity.setActive(true);
+		springDataAccountRepository.save(accountEntity);
 	}
 
 	@Test

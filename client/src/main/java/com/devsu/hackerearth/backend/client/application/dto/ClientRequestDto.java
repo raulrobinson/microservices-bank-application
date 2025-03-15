@@ -33,5 +33,11 @@ public class ClientRequestDto {
 
 	@Schema(description = "Status of the client", example = "true")
 	private boolean isActive;
+
+	@Schema(description = "Client type", example = "NATURAL_PERSON")
+	private String clientType;
+
+	@Schema(description = "Client DNI type", example = "CC")
+	private String dniType;
     
 }
