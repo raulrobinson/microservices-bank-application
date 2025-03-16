@@ -103,8 +103,7 @@ public class JpaClientRepository implements ClientRepository {
 									  PartialClientDto partialClientDto) {
 		// Check if exists client by ID
 		ClientEntity clientById = springDataClientRepository.findClientEntityByClientCode(clientCode);
-        if (clientById == null)
-            throw new GlobalException("Client with CLIENT CODE: " + clientCode + " not found");
+        if (clientById == null) throw new GlobalException("Client with CLIENT CODE: " + clientCode + " not found");
 
 		// Update Client
 		clientById.setActive(partialClientDto.isActive());
@@ -112,11 +111,11 @@ public class JpaClientRepository implements ClientRepository {
 		// Save updated Client
 		ClientEntity updatedClient = springDataClientRepository.save(clientById);
 		if (updatedClient.getId() != null) {
-			transactionLogger.info("Client with CLIENT CODE: {} status updated", updatedClient.getClientCode());
+			transactionLogger.info("Client status with CLIENT CODE: {} updated", updatedClient.getClientCode());
 			return clientMapper.toClientDomain(updatedClient);
 		}
 
-		throw new GlobalException("Client not status updated");
+		throw new GlobalException("Client status not updated");
     }
 
 	// Delete client
