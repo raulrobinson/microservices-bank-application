@@ -2,6 +2,25 @@
 
 This is a service for administrating bank accountEntities. It is a simple client-server application that allows users to create clients.
 
+## Entities
+
+- Client
+
+  | Field       | Type    | Description       | Example                          |
+  |-------------|---------|-------------------|----------------------------------|
+  | id          | UUID    | Unique identifier | 123e4567-e89b-12d3-a456-426614174000 |
+- | address     | String  | Client Address    | 123 Main St                      |
+- | age         | Integer | Client Age        | 25                               |
+- | dni         | String  | DNI identifier    | 12345678                         |
+- | dni_type    | String  | DNI type          | CC, CE, TI, NIT                  |
+- | gender      | String  | Client Gender     | M (male), F (female), O (other)  |
+- | name        | String  | Client Name       | John Doe                         |
+- | phone       | String  | Client Phone      | 3001234567                       |
+- | client_code | String  | Client code       | CLI-1742135617496                |
+- | client_type | String  | Client type       | NATURAL_PERSON                   |
+- | is_active   | Boolean | Client Status     | true                             |
+- | password    | String  | Client Password   | P@55w0rd!*                       |
+
 ## Technologies
 
 - Java 17+
