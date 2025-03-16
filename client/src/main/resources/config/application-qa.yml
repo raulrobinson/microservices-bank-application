@@ -3,9 +3,9 @@ spring:
     init:
       platform: postgres
   datasource:
-    url: jdbc:postgresql://localhost:5432/bank
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://${POSTGRES_SQL_DB_HOSTNAME}:${POSTGRES_SQL_DB_LOC_PORT}/${POSTGRES_SQL_DB_DATABASE}
+    username: ${POSTGRES_SQL_DB_USERNAME}
+    password: ${POSTGRES_SQL_DB_PASSWORD}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 1

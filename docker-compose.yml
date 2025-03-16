@@ -1,18 +1,38 @@
 version: '3.9'
 
+networks:
+  bank-network:
+    driver: bridge
+
 services:
   bank-postgres:
     image: postgres:latest
     container_name: bank-postgres
     restart: always
     ports:
-      - "5432:5432"
+      - ${POSTGRES_SQL_DB_LOC_PORT}:${POSTGRES_SQL_DB_DOC_PORT}
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: bank
+      POSTGRES_USER: $POSTGRES_SQL_DB_USERNAME
+      POSTGRES_PASSWORD: $POSTGRES_SQL_DB_PASSWORD
+      POSTGRES_DB: $POSTGRES_SQL_DB_DATABASE
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bank-network
+
+  client:
+    build: ./client
+    container_name: client
+    env_file: ./.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=qa
+    ports:
+      - "8001:8001"
+    depends_on:
+      - bank-postgres
+    restart: unless-stopped
+    networks:
+      - bank-network
 
 volumes:
   postgres_data:
