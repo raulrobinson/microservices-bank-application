@@ -2,6 +2,7 @@ package com.devsu.hackerearth.backend.client.infrastructure.controller;
 
 import com.devsu.hackerearth.backend.client.application.mapper.ClientMapper;
 import com.devsu.hackerearth.backend.client.application.dto.ClientDto;
+import com.devsu.hackerearth.backend.client.application.usecases.FindClientByDniUseCase;
 import com.devsu.hackerearth.backend.client.application.usecases.GetAllClientsUseCase;
 import com.devsu.hackerearth.backend.client.application.usecases.FindClientByIdUseCase;
 
@@ -27,10 +28,12 @@ public class ClientQueryController {
 
     private final GetAllClientsUseCase getAll;
     private final FindClientByIdUseCase getByClientCode;
+    private final FindClientByDniUseCase getByDni;
 
-    public ClientQueryController(GetAllClientsUseCase getAll, FindClientByIdUseCase getByClientCode) {
+    public ClientQueryController(GetAllClientsUseCase getAll, FindClientByIdUseCase getByClientCode, FindClientByDniUseCase getByDni) {
         this.getAll = getAll;
         this.getByClientCode = getByClientCode;
+        this.getByDni = getByDni;
     }
 
     /**
@@ -55,14 +58,26 @@ public class ClientQueryController {
      * @param clientCode (required)
      * @return ClientDto (found)
      */
-    @GetMapping("/{clientCode}")
+    @GetMapping("/client-code/{clientCode}")
     @Operation(summary = "Get client by client Code", description = "Get client by client Code")
-    @Parameter(name = "clientCode", description = "Client ID", required = true, example = "550e8400-e29b-41d4-a716-446655440000")
+    @Parameter(name = "clientCode", description = "Client Code", required = true, example = "CLI-1742128362966")
     @ApiResponse(responseCode = "200", description = "Client")
     @ApiResponse(responseCode = "404", description = "Client not found")
     @ApiResponse(responseCode = "500", description = "Internal server error")
     public ResponseEntity<ClientDto> get(@PathVariable String clientCode) {
         ClientDto client = ClientMapper.INSTANCE.toClientDto(getByClientCode.handle(clientCode));
+        if (client == null) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(client, HttpStatus.OK);
+    }
+
+    @GetMapping("/dni/{dni}")
+    @Operation(summary = "Get client by DNI", description = "Get client by DNI")
+    @Parameter(name = "dni", description = "Client DNI", required = true, example = "12345678")
+    @ApiResponse(responseCode = "200", description = "Client")
+    @ApiResponse(responseCode = "404", description = "Client not found")
+    @ApiResponse(responseCode = "500", description = "Internal server error")
+    public ResponseEntity<ClientDto> getByDni(@PathVariable String dni) {
+        ClientDto client = ClientMapper.INSTANCE.toClientDto(getByDni.handle(dni));
         if (client == null) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(client, HttpStatus.OK);
     }

@@ -40,7 +40,8 @@ public class SecurityConfig {
 
                         // [CLIENTS]
                         // Clients operations are allowed for all users
-                        .requestMatchers(HttpMethod.GET, basePath + "/clients/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, basePath + "/clients/dni/*").permitAll()
+                        .requestMatchers(HttpMethod.GET, basePath + "/clients/client-code/*").permitAll()
                         .requestMatchers(HttpMethod.GET, basePath + "/clients").permitAll()
                         .requestMatchers(HttpMethod.POST, basePath + "/clients").permitAll()
                         .requestMatchers(HttpMethod.PUT, basePath + "/clients/*").permitAll()

@@ -1,7 +1,6 @@
 package com.devsu.hackerearth.backend.client.infrastructure.persistence;
 
 import java.util.List;
-import java.util.UUID;
 
 import com.devsu.hackerearth.backend.client.application.dto.ClientRequestDto;
 import com.devsu.hackerearth.backend.client.application.dto.PartialClientDto;
@@ -41,6 +40,14 @@ public class JpaClientRepository implements ClientRepository {
 	public ClientDomain getByClientCode(String ClientCode) {
 		ClientEntity clientEntity = springDataClientRepository.findClientEntityByClientCode(ClientCode);
 		if (clientEntity == null) throw new GlobalException("Client with CLIENT CODE: " + ClientCode + " not found");
+		return clientMapper.toClientDomain(clientEntity);
+	}
+
+	// Get clients by DNI
+	@Override
+	public ClientDomain getClientByDni(String dni) {
+		ClientEntity clientEntity = springDataClientRepository.findClientByDni(dni);
+		if (clientEntity == null) throw new GlobalException("Client with DNI: " + dni + " not found");
 		return clientMapper.toClientDomain(clientEntity);
 	}
 

@@ -10,6 +10,10 @@ public interface ClientRepository {
 
     List<ClientDomain> getAll();
     ClientDomain getByClientCode(String clientCode);
+
+    // Get clients by DNI
+    ClientDomain getClientByDni(String dni);
+
     ClientDomain create(ClientRequestDto client);
     ClientDomain update(String clientCode, ClientRequestDto clientDto);
     ClientDomain partialUpdate(String clientCode, PartialClientDto client);

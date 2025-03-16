@@ -19,4 +19,6 @@ public interface SpringDataClientRepository extends JpaRepository<ClientEntity, 
     ClientEntity findClientEntityByDniAndClientCode(String dni, String clientCode);
 
     ClientEntity findClientEntityByClientCode(String clientCode);
+
+    ClientEntity findClientEntityByDni(String dni);
 }
