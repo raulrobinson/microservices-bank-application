@@ -7,6 +7,8 @@ import com.devsu.hackerearth.backend.client.application.dto.PartialClientDto;
 import com.devsu.hackerearth.backend.client.domain.model.ClientDomain;
 import com.devsu.hackerearth.backend.client.domain.repository.ClientRepository;
 import com.devsu.hackerearth.backend.client.infrastructure.persistence.entity.ClientEntity;
+import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.ClientType;
+import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.DniType;
 import com.devsu.hackerearth.backend.client.infrastructure.shared.exception.GlobalException;
 
 import org.slf4j.Logger;
@@ -76,14 +78,14 @@ public class JpaClientRepository implements ClientRepository {
 
 			// Update Client
 			clientByDniAndId.setName(clientDto.getName());
-			clientByDniAndId.setDni(clientDto.getDni());
+			clientByDniAndId.setDni(String.valueOf(DniType.valueOf(clientDto.getDniType())));
 			clientByDniAndId.setGender(clientDto.getGender());
 			clientByDniAndId.setAge(clientDto.getAge());
 			clientByDniAndId.setPhone(clientDto.getPhone());
 			clientByDniAndId.setAddress(clientDto.getAddress());
 			clientByDniAndId.setPassword(clientDto.getPassword());
 			clientByDniAndId.setActive(clientDto.isActive());
-			clientByDniAndId.setClientType(clientDto.getClientType());
+			clientByDniAndId.setClientType(String.valueOf(ClientType.valueOf(clientDto.getClientType())));
 			clientByDniAndId.setClientCode(clientCode);
 
 			// Save updated Client

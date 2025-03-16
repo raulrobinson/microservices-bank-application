@@ -4,6 +4,7 @@ import com.devsu.hackerearth.backend.client.application.dto.ClientDto;
 import com.devsu.hackerearth.backend.client.application.dto.ClientRequestDto;
 import com.devsu.hackerearth.backend.client.domain.model.ClientDomain;
 import com.devsu.hackerearth.backend.client.infrastructure.persistence.entity.ClientEntity;
+import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.ClientType;
 import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.DniType;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,7 @@ public class ClientMapperImpl implements ClientMapper {
         } else {
             ClientDomain clientDomain = new ClientDomain();
             clientDomain.setId(clientEntity.getId());
-            clientDomain.setDni(String.valueOf(clientEntity.getDni()));
+            clientDomain.setDni(clientEntity.getDni());
             clientDomain.setName(clientEntity.getName());
             clientDomain.setPassword(clientEntity.getPassword());
             clientDomain.setGender(clientEntity.getGender());
@@ -28,8 +29,8 @@ public class ClientMapperImpl implements ClientMapper {
             clientDomain.setPhone(clientEntity.getPhone());
             clientDomain.setActive(clientEntity.isActive());
             clientDomain.setClientCode(clientEntity.getClientCode());
-            clientDomain.setClientType(clientEntity.getClientType());
-            clientDomain.setDniType(clientEntity.getDniType());
+            clientDomain.setClientType(String.valueOf(ClientType.valueOf(clientEntity.getClientType())));
+            clientDomain.setDniType(String.valueOf(DniType.valueOf(clientEntity.getDniType())));
             return clientDomain;
         }
     }
@@ -47,8 +48,8 @@ public class ClientMapperImpl implements ClientMapper {
             clientEntity.setPhone(clientRequestDto.getPhone());
             clientEntity.setPassword(clientRequestDto.getPassword());
             clientEntity.setActive(clientRequestDto.isActive());
-            clientEntity.setClientType(clientRequestDto.getClientType());
-            clientEntity.setDniType(clientRequestDto.getDniType());
+            clientEntity.setClientType(String.valueOf(ClientType.valueOf(clientRequestDto.getClientType())));
+            clientEntity.setDniType(String.valueOf(DniType.valueOf(clientRequestDto.getDniType())));
             return clientEntity;
         }
     }
@@ -68,8 +69,8 @@ public class ClientMapperImpl implements ClientMapper {
             clientDto.setPhone(clientDomain.getPhone());
             clientDto.setActive(clientDomain.isActive());
             clientDto.setClientCode(clientDomain.getClientCode());
-            clientDto.setClientType(clientDomain.getClientType());
-            clientDto.setDniType(clientDomain.getDniType());
+            clientDto.setClientType(String.valueOf(ClientType.valueOf(clientDomain.getClientType())));
+            clientDto.setDniType(String.valueOf(DniType.valueOf(clientDomain.getDniType())));
             return clientDto;
         }
     }

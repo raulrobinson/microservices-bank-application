@@ -1,6 +1,5 @@
 package com.devsu.hackerearth.backend.client.application.dto;
 
-import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.DniType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

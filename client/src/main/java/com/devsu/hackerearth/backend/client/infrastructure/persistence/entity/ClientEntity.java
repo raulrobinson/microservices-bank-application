@@ -1,6 +1,5 @@
 package com.devsu.hackerearth.backend.client.infrastructure.persistence.entity;
 
-import com.devsu.hackerearth.backend.client.infrastructure.persistence.enumeration.ClientType;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
@@ -21,7 +20,6 @@ public class ClientEntity extends PersonEntity {
 	@Column(name = "is_active")
 	private boolean isActive;
 
-//	@Enumerated(EnumType.STRING)
 	@Column(name = "client_type", nullable = false, length = 20)
 	private String clientType;
 
