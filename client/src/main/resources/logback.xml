@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
 
-    <!-- Appender para transacciones (INFO) -->
+    <!-- Appender for transactions (INFO) -->
     <appender name="TRANSACTION_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>transactions.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -13,7 +13,7 @@
         </encoder>
     </appender>
 
-    <!-- Appender para errores (ERROR) -->
+    <!-- Appender for errors (ERROR) -->
     <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>errors.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -25,26 +25,26 @@
         </encoder>
     </appender>
 
-    <!-- Appender para mostrar logs en consola -->
+    <!-- Appender for show logs in console -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <!-- Logger para transacciones (INFO) -->
+    <!-- Logger for transactions (INFO) -->
     <logger name="TRANSACTION_AUDIT" level="INFO" additivity="false">
         <appender-ref ref="TRANSACTION_FILE" />
         <appender-ref ref="CONSOLE" />
     </logger>
 
-    <!-- Logger para errores (ERROR) -->
+    <!-- Logger for errors (ERROR) -->
     <logger name="ERROR_AUDIT" level="ERROR" additivity="false">
         <appender-ref ref="ERROR_FILE" />
         <appender-ref ref="CONSOLE" />
     </logger>
 
-    <!-- Logger general para toda la aplicación -->
+    <!-- Logger general for all the application -->
     <root level="INFO">
         <appender-ref ref="CONSOLE" />
     </root>
