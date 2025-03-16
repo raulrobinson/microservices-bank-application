@@ -26,14 +26,14 @@ import java.util.List;
 @Tag(name = "Client", description = "Client operations")
 public class ClientQueryController {
 
-    private final GetAllClientsUseCase getAll;
-    private final FindClientByIdUseCase getByClientCode;
-    private final FindClientByDniUseCase getByDni;
+    private final GetAllClientsUseCase findAllClients;
+    private final FindClientByIdUseCase findClientByClientCode;
+    private final FindClientByDniUseCase findClientByDni;
 
-    public ClientQueryController(GetAllClientsUseCase getAll, FindClientByIdUseCase getByClientCode, FindClientByDniUseCase getByDni) {
-        this.getAll = getAll;
-        this.getByClientCode = getByClientCode;
-        this.getByDni = getByDni;
+    public ClientQueryController(GetAllClientsUseCase findAllClients, FindClientByIdUseCase findClientByClientCode, FindClientByDniUseCase findClientByDni) {
+        this.findAllClients = findAllClients;
+        this.findClientByClientCode = findClientByClientCode;
+        this.findClientByDni = findClientByDni;
     }
 
     /**
@@ -47,8 +47,8 @@ public class ClientQueryController {
             @ApiResponse(responseCode = "204", description = "No content"),
             @ApiResponse(responseCode = "500", description = "Internal server error")
     })
-    public ResponseEntity<List<ClientDto>> getAll() {
-        List<ClientDto> clients = ClientMapper.INSTANCE.toClientDtoList(getAll.handle());
+    public ResponseEntity<List<ClientDto>> getAllClients() {
+        List<ClientDto> clients = ClientMapper.INSTANCE.toClientDtoList(findAllClients.handle());
         if (clients.isEmpty()) return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         return new ResponseEntity<>(clients, HttpStatus.OK);
     }
@@ -64,8 +64,8 @@ public class ClientQueryController {
     @ApiResponse(responseCode = "200", description = "Client")
     @ApiResponse(responseCode = "404", description = "Client not found")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public ResponseEntity<ClientDto> get(@PathVariable String clientCode) {
-        ClientDto client = ClientMapper.INSTANCE.toClientDto(getByClientCode.handle(clientCode));
+    public ResponseEntity<ClientDto> getByClientCode(@PathVariable String clientCode) {
+        ClientDto client = ClientMapper.INSTANCE.toClientDto(findClientByClientCode.handle(clientCode));
         if (client == null) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(client, HttpStatus.OK);
     }
@@ -77,7 +77,7 @@ public class ClientQueryController {
     @ApiResponse(responseCode = "404", description = "Client not found")
     @ApiResponse(responseCode = "500", description = "Internal server error")
     public ResponseEntity<ClientDto> getByDni(@PathVariable String dni) {
-        ClientDto client = ClientMapper.INSTANCE.toClientDto(getByDni.handle(dni));
+        ClientDto client = ClientMapper.INSTANCE.toClientDto(findClientByDni.handle(dni));
         if (client == null) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(client, HttpStatus.OK);
     }
