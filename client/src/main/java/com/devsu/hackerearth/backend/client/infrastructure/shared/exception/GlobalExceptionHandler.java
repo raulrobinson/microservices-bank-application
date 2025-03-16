@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+    private final Logger errorLogger = LoggerFactory.getLogger("ERROR_AUDIT");
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGlobalException(Exception ex,
@@ -28,12 +28,13 @@ public class GlobalExceptionHandler {
         response.put("path", request.getRequestURI());
         response.put("message", ex.getMessage());
 
-        //log.warn("Bad request {}", ex.getMessage());
+        errorLogger.error("Bad request {}", ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(NoContentException.class)
     public ResponseEntity<Map<String, Object>> handleNoContentException() {
+        errorLogger.error("No content found");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
@@ -47,7 +48,7 @@ public class GlobalExceptionHandler {
         response.put("path", request.getRequestURI());
         response.put("message", ex.getMessage());
 
-        //log.warn("Bad request {}", ex.getMessage());
+        errorLogger.error("Not found {}", ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
     

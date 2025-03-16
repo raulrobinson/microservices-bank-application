@@ -55,10 +55,10 @@ public class JpaClientRepository implements ClientRepository {
 	@Override
 	public ClientDomain create(ClientRequestDto client) {
         ClientEntity findClientEntityByDni = springDataClientRepository.findClientByDni(client.getDni());
-        if (findClientEntityByDni != null) throw new GlobalException("Client already exists with ID " + client.getDni());
+        if (findClientEntityByDni != null) throw new GlobalException("Client already exists with DNI " + client.getDni());
 		ClientEntity savedClientEntity = springDataClientRepository.save(clientMapper.toClientEntity(client));
 		if (savedClientEntity.getId() != null) {
-			transactionLogger.info("Client with ID {} and DNI {} saved", savedClientEntity.getId(), savedClientEntity.getDni());
+			transactionLogger.info("Client with CLIENT CODE: {} and ID {} and DNI {} saved", savedClientEntity.getClientCode(), savedClientEntity.getId(), savedClientEntity.getDni());
 			return clientMapper.toClientDomain(savedClientEntity);
 		}
 		throw new GlobalException("Client not saved");
