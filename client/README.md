@@ -1,6 +1,6 @@
 # Client Bank Application
 
-This is a service for administrating bank accountEntities. It is a simple client-server application that allows users to create clients.
+This is a service for administrating bank Customers. It is a simple client-server application that allows users to create clients.
 
 ## Entities
 
